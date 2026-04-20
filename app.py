@@ -62,7 +62,7 @@ st.title("🚀 AI Sentence Auto-Complete")
 st.subheader("Predicting the next words with LSTM Neural Networks")
 
 #loading the pre-trained weights and model architecture
-model = tf.keras.models.load_model('MODELS/AUTO_COM_model.h5')
+model = tf.keras.models.load_model('MODELS/AUTO_COM_model.h5', custom_objects={'LSTM': LSTM, 'Bidirectional': Bidirectional})
 
 # No GIF needed for modern clean UI
 data_url = "" 
